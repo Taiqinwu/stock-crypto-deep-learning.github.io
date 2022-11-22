@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock and Crypto Prediction</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body onload="updateChart('AAPL')">
+    <nav class="navbar">
+        <div class="container">
+            <div>
+                <h1>Deep Learning</h1>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="home.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="stocks.html" class="active">Stocks</a>
+                        </li>
+                        <li>
+                            <a href="cryptos.html">Cryptos</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="graph" id="stockChart"></div>
+            
+    <main class="dashboard">
+        <div class="panel list">
+            <li>
+                <h2>Stocks</h2>
+                <span>Daily Price</span>
+            </li>
+            <li>
+                <button class="button" onclick="updateChart('AAPL')">AAPL</button>
+                <span>$<span id="AAPL-daily-price"></span></span>
+            </li>
+            <li>
+                <button class="button" onclick="updateChart('TSLA')">TSLA</button>
+                <span>$<span id="TSLA-daily-price"></span></span>
+            </li>
+            <li>
+                <button class="button" onclick="updateChart('META')">META</button>
+                <span>$<span id="META-daily-price"></span></span>
+            </li>
+            <li>
+                <button class="button" onclick="updateChart('GOOG')">Google</button>
+                <span>$<span id="GOOGL-daily-price"></span></span>
+            </li>
+            <li>
+                <button class="button" onclick="updateChart('AMZN')">AMZN</button>
+                <span>$<span id="AMZN-daily-price"></span></span>
+            </li>
+        </div>
+
+        <div class="Prediction-panel">
+            <div>
+                <h4>Next Day Prediction</h4>
+                <h1 id="daily-prediction">$0</h1>
+                <!-- <small>Accuracy rate of 85%</small> -->
+            </div>
+            <div>
+                <h4>Next Week Prediction</h4>
+                <h1 id="weekly-prediction">$0</h1>
+                <!-- <small>Accuracy rate of 88%</small> -->
+            </div>
+            <div>
+                <h4>Next Month Prediction</h4>
+                <h1 id="monthly-prediction">$0</h1>
+                <!-- <small>Accuracy rate of 79%</small> -->
+            </div>
+            <!-- <div>
+                <h4>Yearly Prediction</h4>
+                <h1>$168</h1>
+                <small>Accuracy rate of 87%</small>
+            </div> -->
+        </div>
+
+        <!-- <div class="information">
+            <div class="box-1">
+                <h1>Statistics</h1>
+                <small>Market Capitalization</small>
+                <small>Trailing PE</small>
+                <small>PEG Ratio</small>
+                <small>ETE</small>
+            </div>
+            <div class="box-2">
+                <h1>Financials</h1>
+                <small>Annual Reports</small>
+                <small>Quarter Reports</small>
+            </div>
+        </div> -->
+    </main>
+    <script src="../js/stock.js"></script>
+</body>
+</html>
