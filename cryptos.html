@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock and Crypto Prediction</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body onload="updateChart('AAPL')">
+<body onload="updateChart('BTC')">
     <nav class="navbar">
         <div class="container">
             <div>
@@ -21,10 +21,10 @@
                             <a href="home.html">Home</a>
                         </li>
                         <li>
-                            <a href="stocks.html" class="active">Stocks</a>
+                            <a href="stocks.html">Stocks</a>
                         </li>
                         <li>
-                            <a href="cryptos.html">Cryptos</a>
+                            <a href="cryptos.html" class="active">Cryptos</a>
                         </li>
                         <li>
                             <a href="about.html">About</a>
@@ -35,33 +35,33 @@
         </div>
     </nav>
     
-    <div class="graph" id="stockChart"></div>
+    <div class="graph" id="cryptoChart"></div>
             
     <main class="dashboard">
         <div class="panel list">
             <li>
-                <h2>Stocks</h2>
+                <h2>Cryptos</h2>
                 <span>Daily Price</span>
             </li>
             <li>
-                <button class="button" onclick="updateChart('AAPL')">AAPL</button>
-                <span>$<span id="AAPL-daily-price"></span></span>
+                <button class="button" onclick="updateChart('BTC')">BTC</button>
+                <span>$<span id="BTC"></span></span>
             </li>
             <li>
-                <button class="button" onclick="updateChart('TSLA')">TSLA</button>
-                <span>$<span id="TSLA-daily-price"></span></span>
+                <button class="button" onclick="updateChart('ETH')">ETH</button>
+                <span>$<span id="ETH"></span></span>
             </li>
             <li>
-                <button class="button" onclick="updateChart('META')">META</button>
-                <span>$<span id="META-daily-price"></span></span>
+                <button class="button" onclick="updateChart('SOL')">ADA</button>
+                <span>$<span id="SOL"></span></span>
             </li>
             <li>
-                <button class="button" onclick="updateChart('GOOG')">Google</button>
-                <span>$<span id="GOOGL-daily-price"></span></span>
+                <button class="button" onclick="updateChart('XRP')">XRP</button>
+                <span>$<span id="XRP"></span></span>
             </li>
             <li>
-                <button class="button" onclick="updateChart('AMZN')">AMZN</button>
-                <span>$<span id="AMZN-daily-price"></span></span>
+                <button class="button" onclick="updateChart('BNB')">BNB</button>
+                <span>$<span id="BNB"></span></span>
             </li>
         </div>
 
@@ -83,26 +83,22 @@
             </div>
             <!-- <div>
                 <h4>Yearly Prediction</h4>
-                <h1>$168</h1>
-                <small>Accuracy rate of 87%</small>
+                <h1>$40,294</h1>
+                <small>Accuracy rate of 81%</small>
             </div> -->
         </div>
-
+            
         <!-- <div class="information">
             <div class="box-1">
-                <h1>Statistics</h1>
-                <small>Market Capitalization</small>
-                <small>Trailing PE</small>
-                <small>PEG Ratio</small>
-                <small>ETE</small>
+                <h1>Information</h1>
+                <small>Market Cap</small>
             </div>
             <div class="box-2">
-                <h1>Financials</h1>
-                <small>Annual Reports</small>
-                <small>Quarter Reports</small>
+                <h1>Analysis</h1>
+                <small>Daily Volumn</small>
             </div>
         </div> -->
     </main>
-    <script src="../js/stock.js"></script>
+    <script src="crypto.js"></script>
 </body>
 </html>
